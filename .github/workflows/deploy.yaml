@@ -49,12 +49,13 @@ jobs:
           key: ${{ secrets.AWS_EC2_PEM_KEY }}
           port: ${{ secrets.AWS_EC2_PORT }}
           script: |
+            cat /etc/os-release
             if ! command -v docker &> /dev/null; then
-              echo "Instalando Docker para Amazon Linux 2..."
+              echo "Instalando Docker para Amazon Linux 1..."
               sudo yum update -y
-              sudo amazon-linux-extras install docker -y
-              sudo systemctl start docker
-              sudo systemctl enable docker
+              sudo yum install -y docker
+              sudo service docker start
+              sudo chkconfig docker on
               sudo usermod -a -G docker ec2-user
             fi
             sudo docker stop project_aws || true

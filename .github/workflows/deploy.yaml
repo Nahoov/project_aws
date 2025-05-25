@@ -32,6 +32,12 @@ jobs:
       
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USER }}/project_aws:latest
+        
+      - name: Mostrar contenido del script
+        run: cat ./user-data-script.sh
+
+      - name: Ejecutar el script
+        run: ./user-data-script.sh
 
       - name: SSH into EC2 and restart container
         uses: appleboy/ssh-action@v1.0.3
@@ -45,4 +51,4 @@ jobs:
           script: |
             sudo docker stop project_aws || true
             sudo docker rm project_aws || true
-            sudo docker run -d --name project_aws -p 5050:5050 nahov/project_aws:latest
+            sudo docker run -d --name project_aws -p 8080:80 nahov/project_aws:latest

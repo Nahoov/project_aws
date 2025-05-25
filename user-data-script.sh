@@ -14,20 +14,3 @@ sudo systemctl start docker
 #!/bin/bash
 
 
-# Nombre del archivo Dockerfile
-archivo="Dockerfile"
-
-# Contenido del Dockerfile
-contenido="FROM python:latest\n\nWORKDIR /app\n\n# Clona el repositorio desde GitHub\nRUN git clone https://github.com/usuario/repo.git .\n\n# Ejecuta la aplicación\nCMD [\"python\", \"app.py\"]"
-
-# Insertar el contenido en el archivo Dockerfile
-echo -e $contenido > $archivo
-
-sudo docker build -t python-app .
-
-docker run -d --name python-app -p 80:80 python-app
-
-
-# ssh-keygen -t rsa -b 4096 -C "soporteneca@outlook.com"
-
-

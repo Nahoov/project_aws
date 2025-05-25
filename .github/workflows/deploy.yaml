@@ -32,12 +32,15 @@ jobs:
       
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USER }}/project_aws:latest
-        
+
       - name: Mostrar contenido del script
         run: cat ./user-data-script.sh
 
       - name: Ejecutar el script
-        run: ./user-data-script.sh
+        run: 
+            chmod +x ./user-data-script.sh
+            ./user-data-script.sh
+          shell: bash
 
       - name: SSH into EC2 and restart container
         uses: appleboy/ssh-action@v1.0.3

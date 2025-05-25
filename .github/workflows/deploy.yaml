@@ -60,4 +60,5 @@ jobs:
             fi
             sudo docker stop project_aws || true
             sudo docker rm project_aws || true
+            sudo docker rmi nahov/project_aws || true
             sudo docker run -d --name project_aws -p 8080:80 nahov/project_aws:latest

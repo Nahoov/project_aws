@@ -48,7 +48,7 @@
                 <form action="processar_formulario.php" class="formulario" method="post" onsubmit="return validarSenhas()">
 
                     <div class="entrada-dados-cadastro">
-                        <label for="nome_completo"><strong>HOLA TODO BIEN</strong></label>
+                        <label for="nome_completo"><strong>Nome completo</strong></label>
                         <input type="text" name="nome_completo" id="nome_completo" minlength="10" maxlength="35" required>
                     </div>
                     

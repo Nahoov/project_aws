@@ -40,7 +40,6 @@ jobs:
         run: 
             chmod +x ./user-data-script.sh
             ./user-data-script.sh
-          shell: bash
 
       - name: SSH into EC2 and restart container
         uses: appleboy/ssh-action@v1.0.3

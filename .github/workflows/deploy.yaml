@@ -37,9 +37,7 @@ jobs:
         run: cat ./user-data-script.sh
 
       - name: Ejecutar el script
-        run: 
-            chmod +x ./user-data-script.sh
-            ./user-data-script.sh
+        run: chmod +x ./user-data-script.sh; ./user-data-script.sh
 
       - name: SSH into EC2 and restart container
         uses: appleboy/ssh-action@v1.0.3

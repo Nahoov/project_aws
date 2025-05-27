@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+// Variável para armazenar o tipo de usuário
+$user_type = isset($_SESSION['user_type']) ? $_SESSION['user_type'] : 'guest';
+
+@$nome = $_SESSION['nome'];
+
+include 'conexao.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -183,6 +194,8 @@
             </div>
         </section>
     </footer>
+
+    <?php require 'layout\footer.php'; ?>
 
     <script type="text/javascript" src="../javascript/comandos.js"></script>
 </body>

@@ -84,7 +84,7 @@ include 'conexao.php';
                 <img class="imagem-topo" src="../imagens/portada_churrito.jpeg" alt="churros" width=100% height="350px">
             </div>
     
-            <h1>PROMOÇÕES</h1>
+            <h1>PROMOÇÕES!!!!</h1>
     
            <section class="minimenu">
                 <div class="itens-menu">

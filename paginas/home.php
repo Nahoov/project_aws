@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+// Variável para armazenar o tipo de usuário
+$user_type = isset($_SESSION['user_type']) ? $_SESSION['user_type'] : 'guest';
+
+@$nome = $_SESSION['nome'];
+
+include 'conexao.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -73,7 +84,7 @@
                 <img class="imagem-topo" src="../imagens/portada_churrito.jpeg" alt="churros" width=100% height="350px">
             </div>
     
-            <h1>PROMOÇÕES</h1>
+            <h1>PROMOÇÕES!!!!</h1>
     
            <section class="minimenu">
                 <div class="itens-menu">
@@ -183,6 +194,8 @@
             </div>
         </section>
     </footer>
+
+    <?php require 'layout\footer.php'; ?>
 
     <script type="text/javascript" src="../javascript/comandos.js"></script>
 </body>

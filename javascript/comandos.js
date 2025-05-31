@@ -53,7 +53,7 @@ function validacao_cadastro(){
     
     ////////// VALIDAR SENHA //////////
     senha = document.getElementById("senha").value;
-    conf_senha = document.getElementById("conf_enha").value;
+    conf_senha = document.getElementById("confirmar_senha").value;
 
     if (senha != conf_senha) {
         senhaC.setCustomValidity("Senhas diferentes!");

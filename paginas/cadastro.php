@@ -49,7 +49,7 @@
 
                     <div class="entrada-dados-cadastro">
                         <label for="nome_completo"><strong>Nome completo</strong></label>
-                        <input type="text" name="nome_completo" id="nome_completo" minlength="10" maxlength="35" required>
+                        <input type="text" name="nome_completo" id="nome_completo" placeholder="Escreva aqui" minlength="10" maxlength="35" required>
                     </div>
                     
                     <div class="entrada-dados-cadastro">
@@ -64,7 +64,7 @@
         
                     <div  class="entrada-dados-cadastro">
                         <label for="email"><strong>E-mail</strong></label>
-                        <input type="email" name="email" id="email" minlength="11" maxlength="50" required>
+                        <input type="email" name="email" id="email" placeholder="Ex: caio@gmail.com" minlength="11" maxlength="50" required>
                     </div>
         
                     <div  class="entrada-dados-cadastro">
@@ -74,25 +74,25 @@
 
                     <div class="entrada-dados-cadastro">
                         <label for="rua_avenida"><strong>Endereço</strong></label>
-                        <input type="text" name="endereco" id="rua_avenida" minlength="5" maxlength="50" required>
+                        <input type="text" name="endereco" id="rua_avenida" placeholder="Escreva aqui" minlength="5" maxlength="50" required>
                     </div>
         
                 
                     <div class="entrada-dados-cadastro">
                         <label for="login"><strong>Login</strong></label>
-                        <input type="text" name="login" id="login" minlength="4" maxlength="8" pattern="[A-za-z\s]+" required>
+                        <input type="text" name="login" id="login" placeholder="Escreva aqui" minlength="4" maxlength="8" pattern="[A-za-z\s]+" required>
                         <span class="aviso">*O nome deve conter no mínimo 4 caracteres</span>
                     </div>
                     
                     <div class="entrada-dados-cadastro">
                         <label for="senha"><strong>Senha</strong></label>
-                        <input type="password" name="senha" id="senha" minlength="8" required>
+                        <input type="password" name="senha" id="senha" placeholder="Digite uma senha" minlength="8" required>
                         <span class="aviso">*A senha deve conter 8 caracteres</span>
                     </div>
                     
                     <div class="entrada-dados-cadastro">
                         <label for="confirmar_senha"><strong>Confirmar Senha</strong></label>
-                        <input type="password" name="confirmar_senha" id="confirmar_senha" minlength="8" required>
+                        <input type="password" name="confirmar_senha" id="confirmar_senha" placeholder="Digite novamente a senha" minlength="8" required>
                         <span id="mensagem_erro" class="textoErro"></span>
                     </div>
 
